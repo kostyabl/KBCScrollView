@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KBCScrollView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kZ-mj-cmw">
+                                <rect key="frame" x="130" y="55" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5M-Wz-Cdf" customClass="KBCScrollView">
+                                <rect key="frame" x="67" y="120" width="240" height="150"/>
+                                <color key="backgroundColor" red="0.85012315780000003" green="1" blue="0.94634508120000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="weY-F3-roY"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-f7-49d">
+                                <rect key="frame" x="168" y="278" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.85012315780000003" green="1" blue="0.94634508120000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-5t-viL">
+                                <rect key="frame" x="116" y="323" width="143" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="6rA-km-FfA"/>
+                                    <constraint firstAttribute="height" constant="30" id="xiU-Gf-thH"/>
+                                </constraints>
+                                <state key="normal" title="Scroll to frame 5"/>
+                                <connections>
+                                    <action selector="scrollToFrameButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ikH-QY-MQv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCw-ox-O0F">
+                                <rect key="frame" x="77" y="361" width="222" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Btq-XO-Rby"/>
+                                    <constraint firstAttribute="width" constant="222" id="PfH-rr-E7U"/>
+                                </constraints>
+                                <state key="normal" title="Set pagging enable"/>
+                                <connections>
+                                    <action selector="setPagingEnableButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35o-pf-xHT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEB-eE-lKk">
+                                <rect key="frame" x="121" y="399" width="134" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="I1P-st-Enh"/>
+                                    <constraint firstAttribute="height" constant="30" id="R69-pH-Nzv"/>
+                                </constraints>
+                                <state key="normal" title="Reload data"/>
+                                <connections>
+                                    <action selector="reloadDataButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Xh-qc-DLq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="f5M-Wz-Cdf" secondAttribute="trailing" constant="68" id="0M1-tp-MTU"/>
+                            <constraint firstItem="VCw-ox-O0F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Vv-Ml-Kgr"/>
+                            <constraint firstItem="VCw-ox-O0F" firstAttribute="top" secondItem="kr2-5t-viL" secondAttribute="bottom" constant="8" id="3Kr-yO-GtZ"/>
+                            <constraint firstItem="DEB-eE-lKk" firstAttribute="top" secondItem="VCw-ox-O0F" secondAttribute="bottom" constant="8" id="8ul-zO-xkN"/>
+                            <constraint firstItem="ClR-f7-49d" firstAttribute="top" secondItem="f5M-Wz-Cdf" secondAttribute="bottom" constant="8" id="IFx-X7-wNJ"/>
+                            <constraint firstItem="kr2-5t-viL" firstAttribute="top" secondItem="ClR-f7-49d" secondAttribute="bottom" constant="8" id="JGX-Xk-UJL"/>
+                            <constraint firstItem="DEB-eE-lKk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OVV-l5-mQI"/>
+                            <constraint firstItem="ClR-f7-49d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TB4-9F-baO"/>
+                            <constraint firstItem="3kZ-mj-cmw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="V1b-aQ-Cy3"/>
+                            <constraint firstItem="ClR-f7-49d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WPA-y9-ZtA"/>
+                            <constraint firstItem="f5M-Wz-Cdf" firstAttribute="top" secondItem="3kZ-mj-cmw" secondAttribute="bottom" constant="44" id="XfW-a3-yvW"/>
+                            <constraint firstItem="f5M-Wz-Cdf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="ifE-qh-7R2"/>
+                            <constraint firstItem="kr2-5t-viL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lAx-PB-5vD"/>
+                            <constraint firstItem="3kZ-mj-cmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ox9-oi-mT2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WPA-y9-ZtA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pageControlView" destination="ClR-f7-49d" id="3EV-UL-4sI"/>
+                        <outlet property="scrollView" destination="f5M-Wz-Cdf" id="1Ox-Bq-2w2"/>
+                        <outlet property="setPaggingEnableButton" destination="VCw-ox-O0F" id="9NR-6Y-VfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="257.5"/>
+        </scene>
+    </scenes>
+</document>
