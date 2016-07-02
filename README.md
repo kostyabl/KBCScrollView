@@ -1,2 +1,4 @@
 # KBCScrollView
-UIView slider / carousel
+UIView slider / carousel in UIScrollView
+#Demo
+
