@@ -17,7 +17,7 @@ Assign your array to KBCScrollView.views
 It's all for minimal init.
 # Delegate methods
 Setup<br>
-1. Your object is to conform the protocol KBCScrollViewDelegate <br>
+1. Your object should to conform the a protocol KBCScrollViewDelegate <br>
 2. Set delegate, example. : <code> self.scrollView.kbcScrollViewdelegate = self; </code><br>
 Current page did change.<br>
 ```objc
