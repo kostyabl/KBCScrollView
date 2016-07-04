@@ -1,5 +1,5 @@
 # KBCScrollView
-UIView slider / carousel in UIScrollView
+KBCScrollView class provide a horizontal scroll (carousel) UIViews in UIScrollView. The class is designed to make it quick and easy. 
 # Demo
 ![alt tag](https://raw.githubusercontent.com/kostyabl/KBCScrollView/master/KBCScrollView480.gif)
 # Usage
