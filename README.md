@@ -2,12 +2,13 @@
 KBCScrollView class provide a horizontal scroll (carousel) UIViews in UIScrollView. The class is designed to make it quick and easy. 
 # Demo
 ![alt tag](https://raw.githubusercontent.com/kostyabl/KBCScrollView/master/KBCScrollView480.gif)
-# Usage
+# Installation
 Just add <code>KBCScrollView.h</code> and <code>KBCScrollView.m</code> files to your project.<br>
 Or use CocoaPods:<br>
 <code>pod 'KBCScrollView'</code><br>
-Add UIScrollView view on ViewController in storyborad<Br>
-Next, setup KBCScrollView by adding few line of code:<br>
+# Usage
+Add UIScrollView view on ViewController in storyborad and create outlet<Br>
+Setup KBCScrollView by adding few line of code:<br>
 Array with yours UIViews
 ```objc
     NSMutableArray* arrWithUIViews = ...
@@ -17,6 +18,7 @@ Assign your array to KBCScrollView.views
     self.scrollView.views = arrWithUIViews;
 ```  
 It's all for minimal init.
+For more information, see example project.
 # Delegate methods
 Setup<br>
 1. Your object should to conform a protocol KBCScrollViewDelegate <br>
